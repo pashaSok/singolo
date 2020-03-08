@@ -1,1 +1,1 @@
-# singolo
+# [singolo](https://pashaSok.github.io/singolo)
