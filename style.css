@@ -57,17 +57,16 @@ ul{
     list-style: none;
 }
 /* --------------- /reset.css --------------- */
-/* body{
-	max-width: 1020px;
-	margin: 0 auto;
-} */
+body{
+	text-align: justify;
+}
 header{
 	background-color: #2d303a;
 	border-bottom: 6px solid #323746;
-	padding: 45px 40px 35px 40px;
+	padding: 45px 0px 35px 0px;
 }
 .container{
-	width: 1020px;
+	width: 940px;
 	margin: 0 auto;
 }
 header .container{
@@ -127,7 +126,7 @@ header .container{
 }
 .slider{
 	background-color: #f06c64;
-	padding: 53px 40px 58px 40px;
+	padding: 53px 0px 58px 0px;
 	border-bottom: 6px solid #ea676b;
 }
 .slider .container{
@@ -164,7 +163,7 @@ header .container{
 	margin-right: 73px;
 }
 .services{
-	padding: 66px 40px;
+	padding: 66px 0px;
 	background-color: #f2f2f2;
 	border-bottom: 6px solid #ffffff;
 }
@@ -218,13 +217,15 @@ header .container{
 .column__item__content p{
 	font-family: 'Lato Regular';
 	font-size: 12px;
+	max-width: 209px;
+	text-overflow: ellipsis;
 	letter-spacing: -0.1px;
 	text-align: justify;
 	word-spacing: -2px;
 }
 .portfolio{
 	background-color: #2d303a;
-	padding: 74px 40px 67px 40px;
+	padding: 74px 0px 67px 0px;
 	border-bottom: 6px solid #323746;
 }
 .portfolio__head{
@@ -285,7 +286,7 @@ header .container{
 .about-us{
 	background-color: #f2f2f2;
 	color: #666d89;
-	padding: 73px 40px 67px 40px;
+	padding: 73px 0px 67px 0px;
 	border-bottom: 6px solid #ffffff;
 }
 .about-us__head span{
@@ -314,12 +315,14 @@ header .container{
 	font-size: 18px;
 	font-family: 'Lato Black';
 	margin-bottom: 20px;
+	max-width: 300px;
+	text-overflow: ellipsis;
 }
 .about-us__item p{
 	font-size: 12px;
 	font-family: 'Lato Regular';
 	margin-bottom: 30px;
-	width: 90%;
+	width: 95%;
 }
 .about-us__item__social{
 	display: flex;
@@ -340,7 +343,7 @@ header .container{
 	border-radius: 50%;
 }
 .get-a-quote{
-	padding: 73px 40px 74px 40px;
+	padding: 73px 0px 74px 0px;
 	background-color: #f06c64;
 	border-bottom: 6px solid #ea676b;
 }
@@ -458,7 +461,7 @@ header .container{
 	margin-right: 9px;
 }
 footer{
-	padding: 22px 40px;
+	padding: 22px 0px;
 	background-color: #2d303a;
 	color: #666d89;
 	font-size: 12px;
