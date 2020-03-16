@@ -16,7 +16,7 @@
 			</div>
 			<div class="header__menu__wrapper">
 				<ul class="header__menu" id="header__menu">
-					<li><a href="#" class="active">home</a></li>
+					<li><a href="#slider" class="header-active">home</a></li>
 					<li><a href="#services">services</a></li>
 					<li><a href="#portfolio">portfolio</a></li>
 					<li><a href="#about">about</a> </li>
@@ -27,7 +27,7 @@
 	</header>
 	<section class="slider" id="slider">
 		<div class="container">
-				<div class="button-prev"></div>
+				<div class="button-prev" id="button-prev"></div>
 				<div class="slide" id="slide1">
 					<div class="phone-vertical">
 						<div id ="vertical-screen" class="vertical-screen"></div>
@@ -116,31 +116,25 @@
 				<span>Portfolio</span>
 				<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 			</div>
-			<div class="portfolio__buttons">
-				<a href="#">All</a>
-				<a href="#">Web Design</a>
-				<a href="#">Graphic Design</a>
-				<a href="#">Artwork</a>
+			<div class="portfolio__buttons" id="portfolio__buttons">
+				<a  href="#portfolio" class="portfolio-active" onclick="mixPortfolioImg()">All</a>
+				<a href="#portfolio" onclick="mixPortfolioImg()">Web Design</a>
+				<a href="#portfolio" onclick="mixPortfolioImg()">Graphic Design</a>
+				<a href="#portfolio" onclick="mixPortfolioImg()">Artwork</a>
 			</div>
-			<div class="portfolio__images">
-				<div>
+			<div class="portfolio__images" id="mixPortfolioImg">
 					<img src="./assets/ship.png" alt="">
 					<img src="./assets/girl.png" alt="">
 					<img src="./assets/town.png" alt="">
 					<img src="./assets/robot.png" alt="">
-				</div>
-				<div>
 					<img src="./assets/animals.png" alt="">
 					<img src="./assets/sdk.png" alt="">
 					<img src="./assets/rockets.png" alt="">
 					<img src="./assets/birds.png" alt="">
-				</div>
-				<div>
 					<img src="./assets/town-moon.png" alt="">
 					<img src="./assets/write.png" alt="">
 					<img src="./assets/yety.png" alt="">
 					<img src="./assets/table.png" alt="">
-				</div>
 			</div>
 		</div>
 	</section>
@@ -199,12 +193,12 @@
 			</div>
 			<div class="get-a-quote__wrapper">
 				<div class="form">
-					<form action="#">
-						<input class="form__input-text" type="text" name="name" placeholder="Name (Required)" required/>
-						<input class="form__input-text" type="email" name="email" placeholder="Email (Required)" required/>
-						<input class="form__input-text" type="text" name="subject" placeholder="Subject"/>
+					<form action="#" id="get-a-quote__form" onsubmit="formAnswer()">
+						<input id = "name" class="form__input-text" type="text" name="name" placeholder="Name (Required)" required/>
+						<input id="mail" class="form__input-text" type="email" name="email" placeholder="Email (Required)" required/>
+						<input id="subject" class="form__input-text" type="text" name="subject" placeholder="Subject"/>
 						<textarea name="message" id="message"  class="form__input-text form__input-text_area" placeholder="Describe your project in detail..."></textarea>
-						<button type="submit" class="form__button">Submit</button>
+						<button type="submit" class="form__button" id="button__submit">Submit</button>
 					</form>
 				</div>
 				<div class="get-a-quote__content">
