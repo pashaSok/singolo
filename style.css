@@ -230,7 +230,8 @@ a.header-active{
     margin-left: 148px;
     margin-top: 71px;
     border-radius: 5px;
-    display: inline-block;
+	display: inline-block;
+	transition: 0.5s;
 }
 .vertical__on-off__2{
 	width: 45px;
