@@ -120,23 +120,25 @@ portfolioImg.addEventListener('click', (e) => {
 });
 
 
-let closeButton = document.getElementById('closeButton');
 let getAQuoteForm = document.getElementById('get-a-quote__form');
 let submitButton = document.getElementById('button__submit');
 let hiddenFormStatus = document.getElementById('hidden-form');
+let closeButton = document.getElementById('close-button');
 
-hiddenFormStatus.style.display = 'none';
-
-submitButton.addEventListener('click', (e) => {
+submitButton.addEventListener('click', () => {
+	event.preventDefault();
 	let name = document.getElementById('name').value.toString();
 	let mail = document.getElementById('mail').value.toString();
 	let subject = document.getElementById('subject').value.toString();
-	let describe = document.getElementById('describe').value.toString();
-
+	let describe = document.getElementById('messege').value.toString();
 	document.getElementById('NameContent').innerHTML = Boolean(name) ? 'Name: ' + name : 'Без названия';
 	document.getElementById('MailContent').innerHTML = Boolean(mail) ? 'Mail: ' + mail : 'Без электронной почты';
 	document.getElementById('SubjectContent').innerHTML = Boolean(subject) ? 'Subject: ' + subject : 'Без темы';
 	document.getElementById('MessegeContent').innerHTML = Boolean(describe) ? 'Description: ' + describe : 'Без описания';
+	hiddenFormStatus.classList.remove('hidden');
+	document.getElementById('get-a-quote__form').reset();
+});
 
-	hiddenFormStatus.style.display = 'block';
+closeButton.addEventListener('click', () => {
+	hiddenFormStatus.classList.add('hidden');
 });

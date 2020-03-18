@@ -450,7 +450,7 @@ a.portfolio-active{
 .get-a-quote__wrapper{
 	display: flex;
 }
-.get-a-quote span{
+.get-a-quote__head span{
 	color: #f0d8d9;
 	display: block;
 	font-size: 30px;
@@ -500,14 +500,14 @@ a.portfolio-active{
 	color: #ec7f80;
 }
 .form__button{
-	font-size: 18px;
-	font-family: 'Lato Black';
-	padding: 15px 30px 15px 30px;
-	border-radius: 10px;
-	color: #666d89;
-	width: max-content;
+	font-size: 14px;
+	font-family: 'Lato Regular';
+	color: #886A30;
+	width: 136px;
+	height: 38px;
+	text-transform: uppercase;
 	border: 0;
-	background-color: #f0d8d9;
+	background-color: #FBC65F;
 }
 .form__button:hover{
 	cursor: pointer;
@@ -562,10 +562,41 @@ a.portfolio-active{
 }
 
 .hiddenForm{
-    display: block;
-    width: 300px;
-    height: 300px;
-    background: black;
+    width: max-content;
+    height: max-content;
+	background: #FBC65F;
+	font-family: 'Lato Regular';
+	padding: 15px;
+	font-size: 14px;
+	color: #886A30;
+	position: fixed;
+	z-index: 3;
+	top:100px;
+	left: 50%;
+	transform: translate(-50%);
+}
+.hiddenForm span{
+	display: block;
+	padding-bottom: 10px;
+}
+.hiddenForm button{
+	width: max-content;
+	width: 136px;
+	height: 38px;
+	font-size: 14px;
+	text-transform: uppercase;
+	background: #F06C64;
+	color: #FBC65F !important;
+	font-family: 'Lato Regular' !important;
+	border: 0;
+}
+.hiddenForm button:hover{
+	cursor: pointer;
+}
+
+.hidden{
+	transition: 0.5s;
+	display: none;
 }
 
 footer{
