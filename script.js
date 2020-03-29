@@ -1,11 +1,35 @@
 // get element of menu
 let elMenu = document.getElementById('header__menu');
 
-//switch menu element
-elMenu.addEventListener('click', (e) => {
-	elMenu.querySelectorAll('li').forEach((item) => { item.querySelector('a').classList.remove('header-active'); });
-	e.target.classList.add('header-active');
-});
+
+
+
+document.addEventListener('scroll', onScroll);
+
+function onScroll(event) {
+	const curPos = window.scrollY;
+	const sections = document.querySelectorAll('section');
+	const links = document.querySelectorAll('#header__menu a');
+	const mobileLinks = document.querySelectorAll('#mobile__menu-links a');
+	sections.forEach((el) => {
+		if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+			links.forEach((a) => {
+				a.classList.remove('header-active');
+				if (el.getAttribute('class') === a.getAttribute('href').substring(1)) {
+					a.classList.add('header-active');
+				}
+			});
+			mobileLinks.forEach((a) => {
+				a.classList.remove('header-active');
+				if (el.getAttribute('class') === a.getAttribute('href').substring(1)) {
+					a.classList.add('header-active');
+				}
+			});
+		}
+	});
+}
+
+
 
 //get button and screen on vertical phone on slide1
 let verticalPhoneButton = document.getElementById('vertical__on-off');
@@ -141,4 +165,31 @@ submitButton.addEventListener('click', () => {
 
 closeButton.addEventListener('click', () => {
 	hiddenFormStatus.classList.add('hidden');
+});
+
+
+let burgerButton = document.getElementById('burger');
+let closeBurgerButton = document.getElementById('hidden-burger');
+let hiddenMenu = document.getElementById('mobile-menu');
+let mobLinks = document.querySelectorAll('#mobile__menu-links a');
+const sections = document.querySelectorAll('section');
+let shadow =document.getElementById('shadow');
+
+burgerButton.addEventListener('click',()=>{
+	hiddenMenu.classList.remove('close');
+	document.querySelector('html').classList.add('scroll-block');
+	shadow.style.display="block";
+});
+
+closeBurgerButton.addEventListener('click',()=>{
+	hiddenMenu.classList.add('close');
+	document.querySelector('html').classList.remove('scroll-block');
+	shadow.style.display="none";
+});
+mobLinks.forEach((el)=>{
+	el.addEventListener('click',()=>{
+		hiddenMenu.classList.add('close');
+		document.querySelector('html').classList.remove('scroll-block');
+		shadow.style.display="none";
+	});
 });

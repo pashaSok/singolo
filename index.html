@@ -9,6 +9,36 @@
 </head>
 
 <body>
+	<div class="mobile-menu close" id="mobile-menu">
+		<div class="wrapper" id="shadow"></div>
+		<div class="mobile__menu__header">
+			<div class="burger" id="hidden-burger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div>
+				<span class="header__title"><a href="#">singolo<span>*</span></a></span>
+			</div>
+		</div>
+		<ul class="mobile__menu-links" id="mobile__menu-links">
+			<li><a href="#slider" class="header-active" id="header-link">home</a></li>
+			<li><a href="#services" id="header-link">services</a></li>
+			<li><a href="#portfolio" id="header-link">portfolio</a></li>
+			<li><a href="#about-us" id="header-link">about</a> </li>
+			<li><a href="#get-a-quote" id="header-link">contact</a></li>
+		</ul>
+	</div>
+	<div class="header__mobile">
+		<div class="burger" id="burger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div>
+			<span class="header__title"><a href="#">singolo<span>*</span></a></span>
+		</div>
+	</div>
 	<header>
 		<div class="container">
 			<div>
@@ -19,31 +49,32 @@
 					<li><a href="#slider" class="header-active">home</a></li>
 					<li><a href="#services">services</a></li>
 					<li><a href="#portfolio">portfolio</a></li>
-					<li><a href="#about">about</a> </li>
-					<li><a href="#contact">contact</a></li>
+					<li><a href="#about-us">about</a> </li>
+					<li><a href="#get-a-quote">contact</a></li>
 				</ul>
 			</div>
 		</div>
 	</header>
+	
 	<section class="slider" id="slider">
 		<div class="container">
 			<div class="button-prev" id="button-prev"></div>
-			<div class="slide" id="slide1">
-				<div class="phone-vertical">
-					<div id="vertical-screen" class="vertical-screen"></div>
-					<div id="vertical__on-off" class="vertical__on-off"></div>
+				<div class="slide" id="slide1">
+					<div class="phone-vertical">
+						<div id="vertical-screen" class="vertical-screen"></div>
+						<div id="vertical__on-off" class="vertical__on-off"></div>
+					</div>
+					<div class="phone-horizontal">
+						<div id="horizontal__on-off" class="horizontal__on-off"></div>
+						<div id="horizontal-screen" class="horizontal-screen"></div>
+					</div>
 				</div>
-				<div class="phone-horizontal">
-					<div id="horizontal__on-off" class="horizontal__on-off"></div>
-					<div id="horizontal-screen" class="horizontal-screen"></div>
+				<div class="slide-2" id="slide2">
+					<div class="slide-2__phone-vertical">
+						<div id="vertical-screen__2" class="vertical-screen__2"></div>
+						<div id="vertical__on-off__2" class="vertical__on-off__2"></div>
+					</div>
 				</div>
-			</div>
-			<div class="slide-2" id="slide2">
-				<div class="slide-2__phone-vertical">
-					<div id="vertical-screen__2" class="vertical-screen__2"></div>
-					<div id="vertical__on-off__2" class="vertical__on-off__2"></div>
-				</div>
-			</div>
 			<div class="button-next" id="button-next"></div>
 		</div>
 	</section>
@@ -58,7 +89,6 @@
 					nibh.</p>
 			</div>
 			<div class="services__wrapper">
-				<div class="services__column">
 					<div class="column__item">
 						<img src="./assets/Ellipse.png" alt="pen">
 						<div class="column__item__content">
@@ -75,8 +105,6 @@
 								Prae-sent elit leo.</p>
 						</div>
 					</div>
-				</div>
-				<div class="services__column">
 					<div class="column__item">
 						<img src="./assets/Bulb.png" alt="pen">
 						<div class="column__item__content">
@@ -93,8 +121,6 @@
 								Pellentesque egestas venenatis lorem .</p>
 						</div>
 					</div>
-				</div>
-				<div class="services__column">
 					<div class="column__item">
 						<img src="./assets/Heart.png" alt="pen">
 						<div class="column__item__content">
@@ -110,7 +136,6 @@
 							<p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam
 								tellus.</p>
 						</div>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -145,7 +170,7 @@
 		</div>
 	</section>
 	<section class="about-us">
-		<a href="#" id="about"></a>
+		<a href="#" id="about-us"></a>
 		<div class="container">
 			<div class="about-us__head">
 				<span>About Us</span>
@@ -195,7 +220,7 @@
 		</div>
 	</section>
 	<section class="get-a-quote">
-		<a href="#" id="contact"></a>
+		<a href="#" id="get-a-quote"></a>
 		<div class="container">
 			<div class="get-a-quote__head">
 				<span>Get a Quote</span>
