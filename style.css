@@ -73,7 +73,7 @@ body{
 }
 .close{
 	transition: 0.5s;
-	opacity: 0;
+	display: none;
 	left: -100vh;
 }
 .burger-active{
